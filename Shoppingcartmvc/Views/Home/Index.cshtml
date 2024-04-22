@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Shoppingcartmvc.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="d-flex justify-content-center flex-column mt-5">
+              <h1 class="text-center text-success mt-5">Welcome to Shopping Cart</h1>
+              <p class="text-center text-info"> Get the best deals with us</p>
+            </div>
+        </div> <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="img-fluid">
+                <img src="https://th.bing.com/th/id/OIP.DsR0lqBRiFrFoRJng0XkgwHaHd?rs=1&pid=ImgDetMain" class="img-fluid d-block m-auto" />
+            </div>
+        </div>
+   
+
+    </div>
+   
+
+
+
+</div>
+
+
+@* <h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    <img src="@Html.DisplayFor(modelItem => item.Image)" class="w-25 h-25 img-fluid d-block m-auto" />
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+ *@
